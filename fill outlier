@@ -4,6 +4,8 @@ data_1 = readtable('save path the data','PreserveVariableNames', true);
 head(data_1)
 m = table2array(data_1); %%%% Convert table to regular matrix.
 columnMeans = median(m, 1) %%% Get the mean of each column in the matrix.
+%%%fill outlier with median
+%%% all variables>lower threshold or variables<uper threshold replace with median
 a(data_1.feature1>min threshold)= median or mode of feature
 b(data_1.feature2<max threshold)= median or mode of feature
 d(data_1.Compressivestrengthofconcrete>min threshold) = median or mode of feature
